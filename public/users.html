@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Buscador de Usuarios y Recomendaciones</title>
+  
+
+  <script src="../public/node_modules/angular/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="users.js"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.css">
+  
+</head>
+
+<body ng-app="app" ng-controller="userController as controller">
+
+   <div class="col-md-28 col-md-28 col-md-offset-1" id="popupContainer" class="md-padding" >
+        <md-content>
+        <div ng-show="!detailshow" id="finder">
+        <form>
+            <div class="panel panel-default">
+                <div class="panel-heading">Seleccione las características del usuario que desea buscar, e indique la cantidad de recomendaciones que le gustaria recibir.</div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+
+
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" ng-model="model.name" value="{{model.name}}">
+
+                        <label>Average Stars</label>
+                        <input type="text" class="form-control" name="averagestars" ng-model="model.averagestars" value="{{model.averagestars}}">
+
+                        <label>Review Count</label>
+                        <input type="text" class="form-control" name="reviewcount" ng-model="model.reviewcount" value="{{model.reviewcount}}">
+
+                    </div>    
+                    <button type="submit" class="btn btn-success btn-lg" ng-click="controller.consultarAction()">Search</button>
+                    <!--button class="btn btn-primary"  ng-click="showDetails($event,'c8201f03ced2d9d957c1b98c5e0fb311')">Test</button-->
+                     
+                </div>
+            </div>
+
+        </form>
+
+ </div>
+        
+        <div ng-show="model.responseFromServer!=null" class="panel panel-default">
+            <div class="panel-heading">Usuarios obtenidos a partir de los filtros seleccionados...</div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                            <th>UserID</th>                   
+                            <th>Name</th>
+                            <th>Yelping Since</th>
+                            <th>Average Stars</th>    
+                            <th>Review Count</th>                                                 
+                    </thead>
+                    <td>
+                    <tbody>
+                        <tr ng-repeat="x in model.responseFromServer ">
+                            <td><a ng-href="#here" ng-click="controller.consultarActionUserID( x.user_id )">{{ x.user_id }}</a></td>
+                            <td>{{ x.name }}</td>
+                            <td>{{ x.yelping_since }}</td>
+                            <td>{{ x.average_stars }}</td> 
+                            <td>{{ x.review_count }}</td> 
+                          <!--  <td><img ng-src={{x.ImageM}}/></td>-->
+                        </tr>
+                       
+                    </tbody>
+                    </td>
+                </table>
+            </div>
+        </div>
+
+    <div ng-show="model.responseFromServerUserId!=null" class="panel panel-default">
+        <form>
+            <div class="panel panel-default">
+                <div class="panel-heading">Seleccione los atributos.</div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+
+                        <label>User_id</label>
+                        <input type="text" class="form-control" name="user_id" ng-model="model.user_id" value="{{model.user_id}}">
+
+                        <label>City</label>
+                        <input type="text" class="form-control" name="city" ng-model="model.city" value="{{model.city}}">
+
+                        <label>Day</label>
+                        <input type="text" class="form-control" name="day" ng-model="model.day" value="{{model.day}}">
+
+                        <label>Hour</label>
+                        <input type="text" class="form-control" name="hour" ng-model="model.hour" value="{{model.hour}}">
+
+                    </div>    
+                    <button type="submit" class="btn btn-success btn-lg" ng-click="controller.consultarActionReco()">Search</button>
+                    <!--button class="btn btn-primary"  ng-click="showDetails($event,'c8201f03ced2d9d957c1b98c5e0fb311')">Test</button-->
+                     
+                </div>
+            </div>
+
+        </form>
+        </div>    
+
+
+        <div ng-show="model.responseFromServerReco!=null" class="panel panel-default">
+            <div class="panel-heading">Los negocios que te podemos recomendar a partir del usuario que seleccionaste y las categorías de sus negocios visitados son...</div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                            <th>General Information</th>                   
+                            <th>Hours</th>
+                            <th>Categories</th>
+                            <th>Attributes</th>    
+                            <!--<th>Localization</th> -->                                                
+                    </thead>
+                    <td>
+                    <tbody>
+                        <tr ng-repeat="x in model.responseFromServerUserId ">
+                            <td>
+                            <b>Name:</b> {{x.name}}<br>
+                            <b>Address: </b>{{x.address}}<br>{{x.city}}, {{x.state}}. {{x.postal_code}}. {{x.neighborhood}}<br>
+                            <b>Stars:</b> {{x.stars}}<br>
+                            <b>Review Count: </b>{{x.review_count}} <br><br>
+                            <a ng-href="https://www.google.com/maps/@{{x.latitude}},{{x.longitude}},20z" ng-click="" target="_blank">Show Map</a>
+                            </td>
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.hours">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.categories">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>                            
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.attributes">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>
+                        </tr>
+                       
+                    </tbody>
+                    </td>
+                </table>
+            </div>
+        </div>
+
+
+</div> 
+
+     </md-content>
+      
+    </div>
+ 
+</body>
+</html>
+

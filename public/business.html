@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Buscador de Negocios</title>
+  
+
+  <script src="../public/node_modules/angular/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="business.js"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.4/angular-material.css">
+  
+</head>
+
+<body ng-app="app" ng-controller="businessController as controller">
+
+   <div class="col-md-28 col-md-28 col-md-offset-1" id="popupContainer" class="md-padding" >
+        <md-content>
+        <div ng-show="!detailshow" id="finder">
+        <form>
+            <div class="panel panel-default">
+                <div class="panel-heading">Seleccione las características del negocio que desea buscar...</div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" class="form-control" name="city" ng-model="model.city" value="{{model.city}}">
+
+                        <label>Categories</label>
+                        <input type="text" class="form-control" name="categories" ng-model="model.categories" value="{{model.categories}}">
+
+                        <label>BusinessId</label>
+                        <input type="text" class="form-control" name="id" ng-model="model.id" value="{{model.id}}">
+
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" ng-model="model.name" value="{{model.name}}">
+
+                        <label>Stars</label>
+                        <input type="text" class="form-control" name="stars" ng-model="model.stars" value="{{model.stars}}">
+
+                        <label>Reviews</label>
+                        <input type="text" class="form-control" name="reviews" ng-model="model.reviews" value="{{model.reviews}}">
+
+                    </div>    
+                    <button type="submit" class="btn btn-success btn-lg" ng-click="controller.consultarAction1()">Search</button>
+                    <!--button class="btn btn-primary"  ng-click="showDetails($event,'c8201f03ced2d9d957c1b98c5e0fb311')">Test</button-->
+                     
+                </div>
+            </div>
+
+        </form>
+
+        <div ng-show="model.responseFromServer!=null" class="panel panel-default">
+            <div class="panel-heading">Negocios obtenidos a partir de los filtros seleccionados...</div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                            <th>General Information</th>                   
+                            <th>Hours</th>
+                            <th>Categories</th>
+                            <th>Attributes</th>                                                 
+                    </thead>
+                    <td>
+                    <tbody>
+                        <tr ng-repeat="x in model.responseFromServer ">
+                            <td>
+                            <b>Name:</b> {{x.name}}<br>
+                            <b>Address: </b>{{x.address}}<br>{{x.city}}, {{x.state}}. {{x.postal_code}}.<br>
+                            <b>Stars:</b> {{x.stars}}<br>
+                            <b>Review Count: </b>{{x.review_count}} <br>
+                            <b>ID :</b><a ng-href="#here" ng-click="responseFromServerId( x.item_id )">{{ x.item_id }}</a><br>
+                            <a ng-href="https://www.google.com/maps/@{{x.latitude}},{{x.longitude}},20z" ng-click="" target="_blank">Show Map</a>
+                            </td>
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.hours">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.categories">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>                            
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.attributes">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>
+                                                                                 
+                          <!--  <td><img ng-src={{x.ImageM}}/></td>-->
+                        </tr>
+                       
+                    </tbody>
+                    </td>
+                </table>
+            </div>
+        </div>
+
+
+        <div ng-show="model.responseFromServerId!=null" class="panel panel-default">
+            <div class="panel-heading">Los Negocios que podemos recomendarte de acuerdo con el negocio que seleccionaste son:</div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Stars</th>
+                            <th>Review Count</th>                            
+                            <th>Hours</th>
+                            <th>Categories</th>
+                            <th>Attributes</th>
+                    </thead>
+                    <td>
+                    <tbody>
+                        <tr ng-repeat="x in model.responseFromServer ">
+                            <td>{{x.business_id}}</td>
+                            <td>{{x.name}}</td>
+                            <td>{{x.address}}<br>{{x.city}}, {{x.state}}. {{x.postal_code}}.</td>
+                            <td>{{x.stars}}</td>
+                            <td>{{x.review_count}}</td>
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.hours">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.categories">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>                            
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.attributes">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>                            
+                          <!--  <td><img ng-src={{x.ImageM}}/></td>-->
+                        </tr>
+                       
+                    </tbody>
+                    </td>
+                </table>
+            </div>
+        </div>
+        </div> 
+        
+        <div ng-show="model.responseFromServerId!=null" class="panel panel-default">
+            <div class="panel-heading">Otras alternativas que te podrían interesar...</div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Stars</th>
+                            <th>Review Count</th>                            
+                            <th>Hours</th>
+                            <th>Categories</th>
+                            <th>Attributes</th>
+                    </thead>
+                    <td>
+                    <tbody>
+                        <tr ng-repeat="x in model.responseFromServer ">
+                            <td>{{x.business_id}}</td>
+                            <td>{{x.name}}</td>
+                            <td>{{x.address}}<br>{{x.city}}, {{x.state}}. {{x.postal_code}}.</td>
+                            <td>{{x.stars}}</td>
+                            <td>{{x.review_count}}</td>
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.hours">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.categories">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>                            
+                            <td> 
+                            <table class="table table-striped">
+                                <tbody>
+                                   <tr ng-repeat="y in x.attributes">
+                                   <td>{{ y }}</td>
+                                   </tr>
+                                </tbody>
+                            </table>
+                            </td>                            
+                          <!--  <td><img ng-src={{x.ImageM}}/></td>-->
+                        </tr>
+                       
+                    </tbody>
+                    </td>
+                </table>
+            </div>
+        </div>
+        </div> 
+     </md-content>
+      
+    </div>
+ 
+</body>
+</html>
+

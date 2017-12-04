@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Proyecto Fina - Visua Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../app/public/node_modules/angular/angular.js"></script>
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css'>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container" ng-app="app">
+
+  <div class="row" ng-controller="TabController">
+
+    <div class="col-md-32">
+  		<ul class="nav nav-pills nav nav-tabs">
+       	<li ng-class="{ active: isSet(1) }">
+          	<a href ng-click="setTab(1)">Home</a>
+       	</li>
+       	<li ng-class="{ active: isSet(2) }">
+          	<a href ng-click="setTab(2)">Viz 1 </a>
+       	</li>
+        <li ng-class="{ active: isSet(3) }">
+            <a href ng-click="setTab(3)">Viz 2 </a>
+        </li>
+        <li ng-class="{ active: isSet(4) }">
+            <a href ng-click="setTab(4)">Viz 3 </a>
+        </li>
+        <li ng-class="{ active: isSet(5) }">
+            <a href ng-click="setTab(5)">Viz 4</a>
+        </li>
+        <li ng-class="{ active: isSet(6) }">
+            <a href ng-click="setTab(6)">Viz 5</a>
+        </li>
+		    <li ng-class="{ active: isSet(7) }">
+          	<a href ng-click="setTab(7)">Vote predictor!!!</a>
+       	</li>
+       	       
+     	</ul>
+  	</div>
+
+    <div class="col-md-32">
+  		<div >
+
+      <div class="jumbotron" ng-show="isSet(1)" align="center" width="100%">
+         	 <h1>¿Who dominates the Council of Bogotá and how? </h1>
+           <br/><br/><br/><br/><br/><br/>
+          	<p>Leonardo Montero, Daniel Ayala, Vivian Aranda</p>
+			<p>{l.montero, jd.ayala, vl.aranda140}@uniandes.edu.co</p>
+			<p>Visual Analytics (ISIS 4822) - Fall 2017</p>			
+            <br/><br/>
+            <p>Universidad de los Andes, Bogotá, Colombia</p>
+      </div>
+
+      <div ng-show="isSet(2)">
+          <h2>Comparisons of election results</h2>
+      <ul class="nav nav-tabs">
+          <iframe src="indexPC.html" frameborder="0" width="1200" height="1200" scrolling="yes"></iframe>
+      </ul>
+     	</div>
+		
+      <div ng-show="isSet(3)">
+          <h2>Comparisons of election results by period by candidate </h2>
+      <ul class="nav nav-tabs">
+          <iframe src="indexSG.html" frameborder="0" width="1200" height="1200" scrolling="yes"></iframe>
+      </ul>
+      </div>		
+
+      <div ng-show="isSet(4)">
+          <h2>Geographic distribution of electoral results</h2>
+      <ul class="nav nav-tabs">
+          <iframe src="choroplethMap.html" frameborder="0" width="1200" height="1200" scrolling="yes"></iframe>
+      </ul>
+      </div>
+    
+      <div ng-show="isSet(5)">
+          <h2>Comparisons of the number of votes obtained by party in each locality in 2015</h2>
+      <ul class="nav nav-tabs">
+          <iframe src="zoomable_treemap.html" frameborder="0" width="1200" height="1200" scrolling="yes"></iframe>
+      </ul>
+      </div> 
+
+      <div ng-show="isSet(6)">
+          <h2>Comparisons of the number of votes obtained by candidate and similarity - Case Diego Laserna</h2>
+      <ul class="nav nav-tabs">
+          <iframe src="zoomable_treemap_2015.html" frameborder="0" width="1200" height="1200" scrolling="yes"></iframe>
+      </ul>
+      </div> 
+
+      <div ng-show="isSet(7)">
+          <h2>Vote predictor!!!</h2>
+      <ul class="nav nav-tabs">
+          <iframe src="indexPC.html" frameborder="0" width="1200" height="1200" scrolling="yes"></iframe>
+      </ul>
+      </div>  
+</div>
+
+
+  	</div>
+
+    <div  class="col-md-32">
+      <div ng-show="showFrame" >
+
+        <iframe id="frame"  class="iframe-embed" type="text/html" width="100%" height="640"
+         ng-src="{{resourceId}}"
+         allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen
+          frameborder="0">
+        </iframe>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+    <script src="js/elasticsearch.angular.min.js"></script>
+    <script src="js/elasticsearch.min.js"></script>
+
+
+
+<script src="js/index.js"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>

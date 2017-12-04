@@ -1,0 +1,776 @@
+[
+ {
+   "region": "ANTONIO NARIÑO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 150
+ },
+ {
+   "region": "ANTONIO NARIÑO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 107
+ },
+ {
+   "region": "ANTONIO NARIÑO",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 183
+ },
+ {
+   "region": "ANTONIO NARIÑO",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 53
+ },
+ {
+   "region": "ANTONIO NARIÑO",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 109
+ },
+ {
+   "region": "ANTONIO NARIÑO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 228
+ },
+ {
+   "region": "BARRIOS UNIDOS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 296
+ },
+ {
+   "region": "BARRIOS UNIDOS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 179
+ },
+ {
+   "region": "BARRIOS UNIDOS",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 368
+ },
+ {
+   "region": "BARRIOS UNIDOS",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 255
+ },
+ {
+   "region": "BARRIOS UNIDOS",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 378
+ },
+ {
+   "region": "BARRIOS UNIDOS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 122
+ },
+ {
+   "region": "BOSA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 862
+ },
+ {
+   "region": "BOSA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 369
+ },
+ {
+   "region": "BOSA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 223
+ },
+ {
+   "region": "BOSA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 85
+ },
+ {
+   "region": "BOSA",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 236
+ },
+ {
+   "region": "BOSA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 746
+ },
+ {
+   "region": "CANDELARIA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 81
+ },
+ {
+   "region": "CANDELARIA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 674
+ },
+ {
+   "region": "CANDELARIA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 66
+ },
+ {
+   "region": "CANDELARIA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 36
+ },
+ {
+   "region": "CANDELARIA",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 36
+ },
+ {
+   "region": "CANDELARIA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 70
+ },
+ {
+   "region": "CENTROS PENITENCIARIOS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 1
+ },
+ {
+   "region": "CENTROS PENITENCIARIOS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 1
+ },
+ {
+   "region": "CENTROS PENITENCIARIOS",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 26
+ },
+ {
+   "region": "CENTROS PENITENCIARIOS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 2
+ },
+ {
+   "region": "CHAPINERO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 127
+ },
+ {
+   "region": "CHAPINERO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 113
+ },
+ {
+   "region": "CHAPINERO",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 574
+ },
+ {
+   "region": "CHAPINERO",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 1962
+ },
+ {
+   "region": "CHAPINERO",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 240
+ },
+ {
+   "region": "CHAPINERO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 82
+ },
+ {
+   "region": "CIUDAD BOLIVAR",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 942
+ },
+ {
+   "region": "CIUDAD BOLIVAR",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 454
+ },
+ {
+   "region": "CIUDAD BOLIVAR",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 230
+ },
+ {
+   "region": "CIUDAD BOLIVAR",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 71
+ },
+ {
+   "region": "CIUDAD BOLIVAR",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 236
+ },
+ {
+   "region": "CIUDAD BOLIVAR",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 815
+ },
+ {
+   "region": "CORFERIAS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 259
+ },
+ {
+   "region": "CORFERIAS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 154
+ },
+ {
+   "region": "CORFERIAS",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 221
+ },
+ {
+   "region": "CORFERIAS",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 167
+ },
+ {
+   "region": "CORFERIAS",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 177
+ },
+ {
+   "region": "CORFERIAS",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 114
+ },
+ {
+   "region": "ENGATIVA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 1038
+ },
+ {
+   "region": "ENGATIVA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 1046
+ },
+ {
+   "region": "ENGATIVA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 1177
+ },
+ {
+   "region": "ENGATIVA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 545
+ },
+ {
+   "region": "ENGATIVA",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 1150
+ },
+ {
+   "region": "ENGATIVA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 673
+ },
+ {
+   "region": "FONTIBON",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 394
+ },
+ {
+   "region": "FONTIBON",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 306
+ },
+ {
+   "region": "FONTIBON",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 546
+ },
+ {
+   "region": "FONTIBON",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 258
+ },
+ {
+   "region": "FONTIBON",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 389
+ },
+ {
+   "region": "FONTIBON",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 1078
+ },
+ {
+   "region": "KENNEDY",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 1414
+ },
+ {
+   "region": "KENNEDY",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 1109
+ },
+ {
+   "region": "KENNEDY",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 785
+ },
+ {
+   "region": "KENNEDY",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 296
+ },
+ {
+   "region": "KENNEDY",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 891
+ },
+ {
+   "region": "KENNEDY",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 1375
+ },
+ {
+   "region": "MARTIRES",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 152
+ },
+ {
+   "region": "MARTIRES",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 94
+ },
+ {
+   "region": "MARTIRES",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 188
+ },
+ {
+   "region": "MARTIRES",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 60
+ },
+ {
+   "region": "MARTIRES",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 108
+ },
+ {
+   "region": "MARTIRES",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 424
+ },
+ {
+   "region": "PUENTE ARANDA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 399
+ },
+ {
+   "region": "PUENTE ARANDA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 622
+ },
+ {
+   "region": "PUENTE ARANDA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 531
+ },
+ {
+   "region": "PUENTE ARANDA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 120
+ },
+ {
+   "region": "PUENTE ARANDA",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 339
+ },
+ {
+   "region": "PUENTE ARANDA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 279
+ },
+ {
+   "region": "RAFAEL URIBE URIB",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 475
+ },
+ {
+   "region": "RAFAEL URIBE URIB",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 360
+ },
+ {
+   "region": "RAFAEL URIBE URIB",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 243
+ },
+ {
+   "region": "RAFAEL URIBE URIB",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 75
+ },
+ {
+   "region": "RAFAEL URIBE URIB",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 238
+ },
+ {
+   "region": "RAFAEL URIBE URIB",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 365
+ },
+ {
+   "region": "SAN CRISTOBAL",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 655
+ },
+ {
+   "region": "SAN CRISTOBAL",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 235
+ },
+ {
+   "region": "SAN CRISTOBAL",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 190
+ },
+ {
+   "region": "SAN CRISTOBAL",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 74
+ },
+ {
+   "region": "SAN CRISTOBAL",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 381
+ },
+ {
+   "region": "SAN CRISTOBAL",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 1290
+ },
+ {
+   "region": "SANTA FE",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 473
+ },
+ {
+   "region": "SANTA FE",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 132
+ },
+ {
+   "region": "SANTA FE",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 125
+ },
+ {
+   "region": "SANTA FE",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 70
+ },
+ {
+   "region": "SANTA FE",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 92
+ },
+ {
+   "region": "SANTA FE",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 136
+ },
+ {
+   "region": "SUBA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 952
+ },
+ {
+   "region": "SUBA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 1371
+ },
+ {
+   "region": "SUBA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 1657
+ },
+ {
+   "region": "SUBA",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 1537
+ },
+ {
+   "region": "SUBA",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 1845
+ },
+ {
+   "region": "SUBA",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 979
+ },
+ {
+   "region": "SUMAPAZ",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 4
+ },
+ {
+   "region": "SUMAPAZ",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 1
+ },
+ {
+   "region": "SUMAPAZ",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 2
+ },
+ {
+   "region": "SUMAPAZ",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 1
+ },
+ {
+   "region": "SUMAPAZ",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 3
+ },
+ {
+   "region": "TEUSAQUILLO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 277
+ },
+ {
+   "region": "TEUSAQUILLO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 364
+ },
+ {
+   "region": "TEUSAQUILLO",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 534
+ },
+ {
+   "region": "TEUSAQUILLO",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 355
+ },
+ {
+   "region": "TEUSAQUILLO",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 298
+ },
+ {
+   "region": "TEUSAQUILLO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 228
+ },
+ {
+   "region": "TUNJUELITO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 358
+ },
+ {
+   "region": "TUNJUELITO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 215
+ },
+ {
+   "region": "TUNJUELITO",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 166
+ },
+ {
+   "region": "TUNJUELITO",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 36
+ },
+ {
+   "region": "TUNJUELITO",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 165
+ },
+ {
+   "region": "TUNJUELITO",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 238
+ },
+ {
+   "region": "USAQUEN",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 265
+ },
+ {
+   "region": "USAQUEN",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 467
+ },
+ {
+   "region": "USAQUEN",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 1249
+ },
+ {
+   "region": "USAQUEN",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 2401
+ },
+ {
+   "region": "USAQUEN",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 1016
+ },
+ {
+   "region": "USAQUEN",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 320
+ },
+ {
+   "region": "USME",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "NELSON CASTRO RODRIGUEZ",
+   "value": 356
+ },
+ {
+   "region": "USME",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "HERMAN REDONDO GOMEZ",
+   "value": 300
+ },
+ {
+   "region": "USME",
+   "key": "PARTIDO VERDE",
+   "subregion": "DORA LUCIA BASTIDAS UBATE",
+   "value": 119
+ },
+ {
+   "region": "USME",
+   "key": "PARTIDO VERDE",
+   "subregion": "DIEGO GUILLERMO LASERNA ARIAS",
+   "value": 47
+ },
+ {
+   "region": "USME",
+   "key": "PARTIDO LIBERAL COLOMBIANO",
+   "subregion": "ANDRES GIOVANNI BARRIOS BERNAL",
+   "value": 189
+ },
+ {
+   "region": "USME",
+   "key": "POLO DEMOCRATICO ALTERNATIVO",
+   "subregion": "ALVARO JOSE ARGOTE MUNOZ",
+   "value": 387
+ }
+]

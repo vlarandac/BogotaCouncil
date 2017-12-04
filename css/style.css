@@ -1,0 +1,20 @@
+body, .container {
+  margin: 2px;
+
+}
+
+/* text recolor */
+h1,h2, p, a {
+  color: #22304f !important;
+}
+
+/* button recolor */
+.nav-pills > li.active > a, .btn-primary {
+  background-color: #f7f7f7 !important;
+  border-color: #c6c6c6 !important;
+  border-radius: 10px;
+}
+
+.container {
+       max-width: (1600px - @grid-gutter-width);
+   }

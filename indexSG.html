@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Candidates to the Council of Bogotá with greater increase in votes during the last elections. (2011-2015)</title> 
+  <meta charset="utf-8">
+  <meta name="description" content="Slopegraph created using D3.js v4. The slopegraph allows to compare election results in each Bogota zone, for a specific candidate.">
+  <meta name="keywords" content="D3.js,D3 v4,HTML,CSS,JavaScript,2011 - 2015 Election Results Bogotá">
+  <style>
+  
+    body {
+      position: relative;
+      color: #130C0E;
+      background-color: #eee;
+      padding: 20px;
+      font-family: sans-serif;
+      line-height: 1.5;
+      width: 800px;
+      margin: 0 auto;
+    }
+    
+    p {
+      padding-top: 0;
+      margin-top: 0;
+      font-size: 13px;
+      max-width: 800px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 20px;
+      cursor: default;            
+    }
+
+    p {
+      font-family: sans-serif;
+      font-size: 14px;
+      cursor: default;            
+    }
+    
+    h4 {
+      font-family: sans-serif;
+      font-size: 10px;
+      font-weight: bold;
+      cursor: default;            
+    }    
+    
+    #slopegraph {
+      min-height: 400px;
+      padding: 20px 0;
+    }
+    
+    footer {
+      position: relative;
+    }
+    
+    .l-labels, .r-labels {
+      font-size: 10px;
+      cursor: default;
+    }
+        
+    #nav-alt ul {
+      list-style: none;
+    }
+        
+    #nav-alt ul li {
+      padding: 1px 10px;
+      background: #FDBB30;
+      font-family: sans-serif;
+      font-size: 10px;
+      margin-bottom: 1px;
+      width: 100px;
+      height: 14px;
+      cursor: default;      
+    }
+    
+    #nav-alt ul li:hover {
+      background: #7AC143;
+    }
+    
+    text.s-title {
+      fill: #130C0E;
+      letter-spacing: 2px;
+      font-family: sans-serif;
+      font-size: 15px;
+    }  
+    
+    autocomplete {
+      padding: 10px; 
+    }
+      
+    .autocompleteLabel {
+      position:relative; 
+      vertical-align:middle; 
+      width:150px;
+      height:12px;
+      font-family:sans-serif;
+      font-size:12px; 
+      display: inline-block;
+    }   
+
+    .autocompleteInput {
+      width:400px;
+    }
+          
+    .autocompleteButton {
+      background: #130C0E;
+      color: #7AC143;
+      border: none;
+      outline:none;
+      padding: 4px 8px;
+      top: 2px;
+      font-family: sans-serif;
+      font-size: 10px;
+      margin-right: 1px;
+      width: 106px;      
+      vertical-align: middle;      
+    }       
+    
+    .topTenTable {
+      font-family: sans-serif;
+      font-size: 12px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .topTenTableTD, 
+    .topTenTableTH {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }    
+
+  </style>
+  
+  <script src="js/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+
+  <script>
+    $( function() {
+        d3.json('data/JSON/Datos_Total_Slopegraph.json', function(error, data) {
+            if (error) throw error;
+            var candidates = d3.map(data, function(d){return d.NOM_CANDIDATO;}).keys();
+            $( "#candidates" ).autocomplete({
+              source: candidates
+            });
+        });    
+    } );  
+  </script>
+  
+</head>
+<body>
+
+    <div>
+      <h1>Candidates to the council of Bogotá with greater increase in votes during the last elections.</h1> 
+      <br><br/>
+    </div>
+    
+    <div>    
+      <autocomplete>
+        <label class ="autocompleteLabel" for="candidates">Candidate Name: </label>
+        <input class ="autocompleteInput" id="candidates">
+        <button class= "autocompleteButton" onclick="renderSlopegraph()">Show data</button>
+      </autocomplete>
+      <br><br/>
+    </div>
+    
+    <div>
+      <table>
+        <tr>
+          <td id="slopegraphTD">
+            <svg id="slopegraphSVG" width="600" height="400">
+            </svg>          
+          </td>          
+          <td>
+            <nav id='nav-alt'></nav>
+          </td>
+      </table>           
+    </div> 
+
+    <div>
+      <br><br/>
+      <p>Below is the information of the 10 candidates whose votes had the greatest variation in 2015 with respect to 2011, as well as the areas of the city where these variations were presented.</p>
+    </div>
+    
+    <div>
+      <table class="topTenTable">
+        <tr>
+          <th class="topTenTableTH">Id</th>
+          <th class="topTenTableTH">Candidate</th>
+          <th class="topTenTableTH">Locality(ies)</th>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 1</td>
+          <td class="topTenTableTD"> JUAN FELIPE GRILLO</td>
+          <td class="topTenTableTD"> Engativá, Suba</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 2</td>
+          <td class="topTenTableTD"> RUBEN DARIO TORRADO PACHECO</td>
+          <td class="topTenTableTD"> Puente Aranda, Engativá</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 3</td>
+          <td class="topTenTableTD"> JORGE LOZADA VALDERRAMA</td>
+          <td class="topTenTableTD"> Engativá, Suba, Usaquén</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 4</td>
+          <td class="topTenTableTD"> HORACIO JOSE SERPA MONCADA</td>
+          <td class="topTenTableTD"> Kennedy, Los Mártires, San Cristóbal, Tunjuelito</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 5</td>
+          <td class="topTenTableTD"> CESAR ALFONSO GARCIA VARGAS</td>
+          <td class="topTenTableTD"> Engativá, Bosa</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 6</td>
+          <td class="topTenTableTD"> JULIO CESAR ACOSTA ACOSTA</td>
+          <td class="topTenTableTD"> Suba, Bosa, Engativá</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 7</td>
+          <td class="topTenTableTD"> NELLY PATRICIA MOSQUERA MURCIA</td>
+          <td class="topTenTableTD"> San Cristóbal, Usme, Antonio Nariño, Kennedy</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 8</td>
+          <td class="topTenTableTD"> MARCO FIDEL RAMIREZ ANTONIO</td>
+          <td class="topTenTableTD"> Bosa</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 9</td>
+          <td class="topTenTableTD"> ALVARO JOSE ARGOTE MUNOZ	</td>
+          <td class="topTenTableTD"> San Cristóbal</td>
+        </tr>
+        <tr>
+          <td class="topTenTableTD"> 10</td>
+          <td class="topTenTableTD"> ROBERTO HINESTROSA REY</td>
+          <td class="topTenTableTD"> Suba</td>
+        </tr>
+      </table>    
+      <br><br/>
+    </div>
+    
+ 
+    
+    <script>
+        
+      function viewAll() {
+        d3.selectAll('.elm').transition().style('opacity', 1);
+        d3.selectAll('.s-line').style('stroke', '#130C0E');
+      }
+      
+      function renderSlopegraph() {
+            
+        candidateName = document.getElementById("candidates").value;
+        
+        if (candidateName == "" ) {
+          return;
+        }
+        
+        var w = 600,
+            h = 400,
+            margin = {top: 60, bottom: 50, left: 150, right: 150},
+            strokeColour = 'black',
+            keyValueStart = '2011',
+            keyValueEnd = '2015',
+            keyName = 'ZONA', 
+            format = d3.format('');
+            
+        d3.json('data/JSON/Datos_Total_Slopegraph.json', function(error, data) { 
+        
+          if (error) throw error;
+        
+          data = data.filter(function(d){return d.NOM_CANDIDATO  == candidateName;});
+                  
+          var keyValueStartMin = d3.min(data, function (d) { return parseInt(d[keyValueStart]); } );
+          var keyValueStartMax = d3.max(data, function (d) { return parseInt(d[keyValueStart]); } );
+          
+          var keyValueEndMin = d3.min(data, function (d) { return parseInt(d[keyValueEnd]); } );
+          var keyValueEndMax = d3.max(data, function (d) { return parseInt(d[keyValueEnd]); } );
+          
+          var yScale = d3.scaleSqrt()
+              .domain([d3.min([keyValueStartMin, keyValueEndMax]), d3.max([keyValueStartMax, keyValueEndMax])])
+              .range([h - margin.top, margin.bottom]);
+                            
+          d3.select("#slopegraphSVG").remove();
+
+          var svg = d3.select("#slopegraphTD").append("svg")
+              .attr("id", "slopegraphSVG")
+              .attr("width", w)
+              .attr("height", h);          
+
+          var leftTitle = svg.append('text')
+              .attr("class", "s-title")
+              .attr("x", margin.left - 3)
+              .attr("y", margin.top / 2)
+              .text(keyValueStart + " ↓")
+              .style("text-anchor","end");
+
+          var rightTitle = svg.append("text")
+              .attr("class", "s-title")
+              .attr("x", w - margin.right + 3)
+              .attr("y", margin.top / 2)
+              .text("↓ " + keyValueEnd)
+              .style("text-anchor","start");
+                                            
+          var leftLabels = svg.selectAll(".left-labels")
+              .data(data).enter()
+                  .append("text")
+                      .attr("class", function (d, i) { return "l-labels elm " + "sel-" + i; } )
+                      .attr("x", margin.left - 3)
+                      .attr("y", function(d) { return yScale(d[keyValueStart]) + 4; })
+                      .text( function (d) { return d[keyName] + " - " + format(d[keyValueStart]); } )
+                      .style("text-anchor","end")
+                      .on('mouseover', function (d, i){ 
+                          highlightLine(d, i); 
+                      });
+                      
+          var rightLabels = svg.selectAll(".r-labels")
+              .data(data).enter()
+                  .append("text")
+                      .attr("class", function (d, i) { return "r-labels elm " + "sel-" + i; } )
+                      .attr("x", w - margin.right + 3)
+                      .attr("y", function(d) { return yScale(d[keyValueEnd]) + 4; })
+                      .text( function (d) { return d[keyName] + " - " + format(d[keyValueEnd]); } )
+                      .style("text-anchor","start")
+                      .on('mouseover', function (d, i){ 
+                          highlightLine(d, i); 
+                      });
+                      
+          var lines = svg.selectAll("g")
+              .data(data).enter()
+                  .append("line")
+                      .attr("x1", margin.left)
+                      .attr("x2", w - margin.right)
+                      .attr("y1", function(d) { return yScale(d[keyValueStart]); } )
+                      .attr("y2", function(d) { return yScale(d[keyValueEnd]); } )
+                      .style("stroke", strokeColour)
+                      .style("stroke-width", 1)
+                      .attr("class", function (d, i) { return "s-line elm " + "sel-" + i; } )
+                      .on('mouseover', function (d, i){ 
+                          highlightLine(d, i); 
+                      });  
+          
+          d3.select(".ul").remove();         
+          
+          var ul = d3.select('#nav-alt').append('ul');
+          
+          ul.attr("class", "ul");
+          
+          ul.append('li')
+              .style("background", "#130C0E")
+              .style("color", "#7AC143")
+              .on('click', function () { viewAll(); })
+              .text("Ver todas");  
+          
+          ul.selectAll('li')
+              .data(data)
+              .enter().append('li')
+              .on('click', function (d, i) {
+                  highlightLine(d, i);
+              })
+              .text(function (d) { return d.ZONA; });  
+          
+        }); 
+              
+      }  
+
+      function highlightLine(d, i) {
+          d3.selectAll('.elm').transition().style('opacity', 0.025);
+          d3.selectAll('.sel-' + i).transition().style('opacity', 1);
+          d3.selectAll('.s-line').style('stroke', '#FDBB30');
+          d3.selectAll('.s-line.sel-' + i).style('stroke', '#130C0E');
+      }      
+
+    </script>
+
+</body>
+</html>
