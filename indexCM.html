@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="js/d3.v4.min.js"></script>
+  <style>
+  
+    div.tooltip {	
+      position: absolute;			
+      text-align: center;			
+      width: 150px;					
+      height: 44px;					
+      padding: 2px;				
+      font: 10px sans-serif;		
+      background: GhostWhite;
+      border: 0px;		
+      border-radius: 4px;			
+      pointer-events: none;			
+    }    
+  
+  </style>
+</head>
+
+  <div class="center" align="center">
+  
+    <p>
+      Año: <select id="yearList" style="width: 100px;">
+        <option value=0>...</option>
+        <option value=2011>2011</option>
+        <option value=2015>2015</option>
+      </select>
+      Partido: <select id="partyList" style="width: 400px;">
+        <option value=0>...</option>
+      </select>  
+      
+      Candidato: <select id="candidateList" style="width: 400px;">
+        <option value=0>...</option>
+      </select>  
+    </p>
+        
+  </div>
+
+  <div id="mapDiv" class="center" align="center"></div>
+
+<body>
+  <script>
+  
+  var candidateData = "";
+  
+  function drawMap(){ 
+  
+    var mapWidth = 800;
+    var mapHeight = 500;
+    
+    d3.select("#mapSVG").remove();
+    
+    var mapSVG = d3.select("#mapDiv").append("svg")
+      .attr("id", "mapSVG")    
+      .attr("width", mapWidth)
+      .attr("height", mapHeight);    
+        
+    mapSVG.append("rect")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", mapWidth)
+      .attr("height", mapHeight)
+      .style("fill", "white")
+      .style("stroke", "black")
+      .style("stroke-width", 1);   
+        
+    var projection = d3.geoMercator()
+      .center([-74.0, 4.55])
+      .scale(42000);
+
+    var path = d3.geoPath()
+      .projection(projection);
+      
+    var div = d3.select("body").append("div")	
+      .attr("class", "tooltip")
+      .style("opacity", 0);
+      
+    d3.json("data/GeoJSON/localidadGeojson.json", function(err, geojson) {
+    
+      var localidad = mapSVG.append("g");
+      localidad.selectAll('path')
+        .data(geojson.features)
+        .enter()
+        .append('path')
+        .attr('d', path.projection(projection))
+        .attr("id", "localidadMapSVG")
+        .attr("class", function(d) { return "localidad_" + d.properties["LOCCODIGO"]; } )
+        .style('fill', 'white')
+        
+        .on("mouseover", function(d) {
+        
+          zona = d3.select(this);
+        
+          if (candidateData != "") {
+            
+            var votosObtenidos = parseInt(candidateData["0"][parseInt(zona._groups["0"]["0"].className.baseVal.split("_")[1])]);
+
+            var votosTotalesCandidato = parseInt(candidateData["0"].TOTAL);
+            
+            var porcentajeVotosCandidato = (votosObtenidos * 100 / votosTotalesCandidato).toFixed(2);
+
+            
+            div.html( d.properties.LOCNOMBRE + 
+                      "<br/>Votos obtenidos:" + votosObtenidos + 
+                      "<br/>% votos candidato:" + porcentajeVotosCandidato +
+                      "<br/>Total votos candidato:" + parseInt(candidateData["0"].TOTAL) );
+          
+            div.transition()		
+            .duration(500)		
+            .style("opacity", .9)
+            .style("left", (d3.event.pageX) + "px")		
+            .style("top", (d3.event.pageY - 28) + "px");          
+          
+          }
+		      
+        })
+        .on("mouseout", function(d) {	
+          div.transition()		
+          .duration(500)		
+          .style("opacity", 0);		      
+        })         
+        
+        .style("stroke", 'white')
+        
+        .transition()
+        .duration(500)		
+        .style('fill', 'white')          
+        
+        .transition()
+        .delay(500)		
+        .duration(2000)        
+        .style('fill', 'Gainsboro');
+        
+    }); 
+  
+  }  
+
+  d3.select("#yearList").on("change", function () {
+    candidateData = "";
+    year = d3.select("#yearList").property("value");
+    fillPartyList(year);
+    drawMap();
+  });   
+
+  d3.select("#partyList").on("change", function () {
+    candidateData = "";
+    year = d3.select("#yearList").property("value");
+    partyCode = d3.select("#partyList").property("value");
+    fillCandidateList(year, partyCode);
+  });
+
+  d3.select("#candidateList").on("change", function () {
+    candidateData = "";
+    year = d3.select("#yearList").property("value");
+    partyCode = d3.select("#partyList").property("value");
+    candidate = d3.select("#candidateList").property("value");
+    choroplethMap(year, partyCode, candidate);
+  });
+
+  function fillPartyList(year){
+
+    var sel = document.getElementById('candidateList');
+    sel.options.length = 0;
+    
+    var opt = document.createElement('option');    
+    
+    opt.innerHTML = "...";
+    opt.value = 0;    
+    sel.appendChild(opt);    
+  
+    var sel = document.getElementById('partyList');
+    sel.options.length = 0;
+    
+    var opt = document.createElement('option');    
+    
+    opt.innerHTML = "...";
+    opt.value = 0;    
+    sel.appendChild(opt);    
+    
+    if (year > 0) {
+
+      d3.csv("data/csv/Datos_"+year+".csv", function(error, data) {
+      
+        var parties = d3.map(data, function(d){return d.COD_PARTIDO +"||"+ d.NOM_PARTIDO;}).keys();
+        
+        for(var i = 0; i < parties.length; i++) {
+          opt = document.createElement('option');
+          opt.innerHTML = parties[i].split("||")[1];
+          opt.value = parties[i].split("||")[0];
+          sel.appendChild(opt);
+        } 
+       
+      });  
+    
+    }
+    
+  } 
+
+  
+  function fillCandidateList(year, partyCode){
+  
+    var sel = document.getElementById('candidateList');
+
+    sel.options.length = 0;
+    
+    var opt = document.createElement('option');    
+    
+    opt.innerHTML = "...";
+    opt.value = 0;    
+    sel.appendChild(opt);    
+    
+    if (year > 0) {
+
+      d3.csv("data/csv/Datos_"+year+".csv", function(error, data) {
+
+        var candidates = d3.map(data.filter(function(d){return d.COD_PARTIDO ==  partyCode;}), function(d){return d.NOM_CANDIDATO;}).keys();
+        
+        for(var i = 0; i < candidates.length; i++) {
+          opt = document.createElement('option');
+          opt.innerHTML = candidates[i];
+          opt.value = candidates[i];
+          sel.appendChild(opt);
+        } 
+       
+      });  
+    
+    }
+
+  } 
+
+  
+  function choroplethMap(year, partyCode, candidate){ 
+  
+    d3.csv("data/csv/Datos_"+year+".csv", function(error, data) {
+
+      data = data.filter(function(row) {
+        return row['COD_PARTIDO'] == partyCode;
+      });
+
+      data = data.filter(function(row) {
+        return row['NOM_CANDIDATO'] == candidate;
+      });
+      
+      candidateData = data;
+
+      var values = [];
+      for (var key in data[0]) {
+        if (key != "TOTAL" && key != "COD_PARTIDO" && key != "NOM_PARTIDO") { 
+          if (data[0].hasOwnProperty(key)) {
+            if ( !isNaN(Number(data[0][key])) ) {
+                values.push(Number(data[0][key]));      
+            }
+          }
+        }
+      }
+      
+      var opacityScale = d3.scaleLinear()
+        .domain([d3.min(values), d3.max(values)])
+        .range([0.04,1]);
+
+        d3.selectAll("#localidadMapSVG")
+      
+        .transition()
+        .duration(500)		
+        .style('fill-opacity', function (d, i) { 
+          return ( opacityScale( data[0][Number(d.properties["LOCCODIGO"])] ) );
+        })
+        .style('fill', 'white')  
+      
+        .transition()
+        .delay(500)
+        .duration(2000)		
+        .style('fill', function () {
+          if (partyCode == 0) {
+            return "Gainsboro";
+          } else if (partyCode == 1) {
+            return "Red";
+          } else if (partyCode == 2) {
+            return "Blue ";
+          } else if (partyCode == 5) {
+            return "Green";
+          } else {
+            return "Orange ";
+          }
+          
+        });
+        
+        
+     
+    });  
+  
+  }
+  
+  drawMap();
+      
+  </script>
+</body>
