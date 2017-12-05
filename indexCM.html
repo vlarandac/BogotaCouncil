@@ -78,7 +78,7 @@
       .attr("class", "tooltip")
       .style("opacity", 0);
       
-    d3.json("data/GeoJSON/localidadGeojson.json", function(err, geojson) {
+    d3.json("data/jeoJSON/localidadGeojson.json", function(err, geojson) {
     
       var localidad = mapSVG.append("g");
       localidad.selectAll('path')
