@@ -1,4 +1,4 @@
-# Bogotá¿s Council Elections 2011 and 2015
+# Bogotá's Council Elections 2011 and 2015
 
 The analysis of the behavior presented by the voters is an issue that has gained strength every day, candidates want to understand the results and find information of interest that can lead them to improve their campaigns and detect the areas in which they could have greater influence in future elections. Likewise, several ways of analyzing these data and various visualizations have been created to facilitate the interpretation of said behavior, however, not all of them helps with the analysis and interpretation of the data of the results obtained in the different elections that have been analyzed , that is why it is important to choose correctly the type of visualization and the best channels to be used to be able to find interesting findings. In this project we study the elections to Bogota's Council and made some interesting visualizations to analize it.<br/><br/><br/><br/>
 
