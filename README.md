@@ -1,16 +1,16 @@
 # Bogotá's Council Elections 2011 and 2015
 
-The analysis of the behavior presented by the voters is an issue that has gained strength every day, candidates want to understand the results and find information of interest that can lead them to improve their campaigns and detect the areas in which they could have greater influence in future elections. Likewise, several ways of analyzing these data and various visualizations have been created to facilitate the interpretation of said behavior, however, not all of them helps with the analysis and interpretation of the data of the results obtained in the different elections that have been analyzed , that is why it is important to choose correctly the type of visualization and the best channels to be used to be able to find interesting findings. In this project we study the elections to Bogota's Council and made some interesting visualizations to analize it.<br/><br/><br/><br/>
+The analysis of the behavior presented by the voters is an issue that has gained strength every day, candidates want to understand the results and find information of interest that can lead them to improve their campaigns and detect the areas in which they could have greater influence in future elections. Likewise, several ways of analyzing these data and various visualizations have been created to facilitate the interpretation of said behavior, however, not all of them helps with the analysis and interpretation of the data of the results obtained in the different elections that have been analyzed , that is why it is important to choose correctly the type of visualization and the best channels to be used to be able to find interesting findings. In this project we study the elections to Bogota's Council and made some interesting visualizations to analize it.<br/><br/>
 
-Tasks:
+## Tasks:
 <br/><br/>
 T1: As a candidate where should I focus my next campaign?<br/>
 T2: Identify other candidates similar to me that obtained more votes than me.<br/>
 T3: Compare results between candidates from different periods and party. <br/>
 T4: Present the difference of results by locality by candidate between 2011 and 2015.<br/>
-T5: Locate the area where a political party is strongest.<br/><br/><br/>
+T5: Locate the area where a political party is strongest.<br/>
 
-Idioms: 
+## Idioms: 
 <br/><br/>
 Viz1: Paralell Coordinates: Analyze-Consume-Present / Search – Lookup / Compare: T3<br/>
  ![Visualización](https://raw.githubusercontent.com/vlarandac/BogotaCouncil/master/Parallel%20Coordinates.PNG) <br/><br/>
@@ -25,7 +25,8 @@ Viz5: Zoomable Treemap, Histogram, Piechart: Analyze-Consume-Present / Search �
 Votes Predictor! – Annotate / Compare
 <br/><br/>
 
-Insights:<br/><br/>
+## Insights:
+<br/><br/>
 The analysis of the behavior of voters in the different types of elections is a very interesting task, with the different data sources we can obtain timely results that include characterizations, classifications, analysis of characteristics, and summaries among others, in such a way that we can have results from several perspectives.<br/><br/>
 Integrating the different sources that we have detected with the sources that will be supplied by the clients of the group resulted in a fairly complete work that provides a complete and quite interesting picture of how they have captured the intention to vote by political party in the different localities of the city.<br/><br/>
 The localities with more participation were, in their order, Suba, Engativa and Kennedy. In each of these localities the progressive party and the green party present a very favorable dynamic, thus demonstrating a high acceptance (in proportion to the voters) for the neighborhoods of popular sectors.<br/><br/>
