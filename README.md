@@ -12,15 +12,21 @@ T5: Locate the area where a political party is strongest.<br/><br/><br/>
 
 Idioms: 
 <br/><br/>
-Viz1: Paralell Coordinates: Analyze-Consume-Present / Search – Lookup / Compare: T3
-Viz2: Slopegraph: Analyze-Consume-Present / Search – Lookup / Compare: T4
-Viz3: Choropleth map: Analyze-Consume-Present / Search – Browse / Summarize: T5
-Viz4: Zoomable Treemap, Histogram: Analyze-Consume-Present / Search – Lookup /Summarize: T3
-Viz5: Zoomable Treemap, Histogram, Piechart: Analyze-Consume-Present / Search – Lookup /Summarize: T1
+Viz1: Paralell Coordinates: Analyze-Consume-Present / Search – Lookup / Compare: T3<br/>
+
+Viz2: Slopegraph: Analyze-Consume-Present / Search – Lookup / Compare: T4<br/>
+
+Viz3: Choropleth map: Analyze-Consume-Present / Search – Browse / Summarize: T5<br/>
+
+Viz4: Zoomable Treemap, Histogram: Analyze-Consume-Present / Search – Lookup /Summarize: T3<br/>
+
+Viz5: Zoomable Treemap, Histogram, Piechart: Analyze-Consume-Present / Search – Lookup /Summarize: T1<br/>
+
 Votes Predictor! – Annotate / Compare
 
-Usted puede acceder para ver los distintos proyectos de la clase en el siguiente link [Proyectos Visual Analytics 2017](http://johnguerra.co/classes/visual_analytics_fall_2017/students/index.html).
+<br/><br/>
+You can see all final proyects of the course in this link  [Final Proyects Visual Analytics 2017 Fall](http://johnguerra.co/classes/visual_analytics_fall_2017/projects.html).
 <br/>
-Usted puede acceder al [Sitio del proyecto](https://vlarandac.github.io/Compras-de-libros-en-Amazon/).
+Also you can access to this project in this link [Sitio del proyecto](https://vlarandac.github.io/BogotaCouncil/).
 
 
