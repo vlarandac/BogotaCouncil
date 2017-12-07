@@ -13,7 +13,7 @@ T5: Locate the area where a political party is strongest.<br/><br/><br/>
 Idioms: 
 <br/><br/>
 Viz1: Paralell Coordinates: Analyze-Consume-Present / Search – Lookup / Compare: T3<br/>
-
+ ![Visualización](https://raw.githubusercontent.com/vlarandac/BogotaCouncil/master/Parallel%20Coordinates.PNG) 
 Viz2: Slopegraph: Analyze-Consume-Present / Search – Lookup / Compare: T4<br/>
 
 Viz3: Choropleth map: Analyze-Consume-Present / Search – Browse / Summarize: T5<br/>
